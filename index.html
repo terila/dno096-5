@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <title>👴🏻👴🏼👴🏽👴🏾👴🏿 jQuery</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <main>
+            <p>
+                <a href="index.html" class="activo">Hola</a>
+                <a href="page-1.html">Selecciona</a>
+                <a href="page-2.html">Foto</a>
+            </p>
+            <h1></h1>
+            <h2></h2>
+            <p id="aqui"></p>
+            <p id="alla" class="escondido"></p>
+        </main>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            var texto = {
+                saludo: ["¡Hola caos!", "¡Hola cosmos!"],
+                nombre: "Mi nombre es Teresita Ilabaca",
+                motivo: "Tomé este ramo porque si bien yo tomé la versión de inforgrafía digital, senti que en esta variable del ramo podría aprender más cosas y refrescar lo que ya había aprendido para ponerlo en práctica en un futuro; por otro lado sigo en este curso porque me ilusiona mucho aprender sobre estas cosas y lograr cosas <span>nuevas.....</span>",
+                etc: "Ya revisé mi primera nota y la verdad es que todo bien.😁👍",
+            };
+            var aleatorio = Math.floor(Math.random() * texto.saludo.length);
+            console.log(aleatorio);
+            $("h1").html(texto.saludo[aleatorio]);
+            $("h2").html(texto.nombre);
+            $("#aqui").html(texto.motivo);
+            $("#alla").html(texto.etc);
+
+            function mostrar() {
+                $("#alla").toggleClass("escondido");
+            }
+            $("span").hover(mostrar);
+        </script>
+    </body>
+</html>
