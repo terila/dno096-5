@@ -15,29 +15,216 @@
             <h1>Selecciona</h1>
             <select>
                 <option>Todos</option>
-                <option>Unos</option>
-                <option>Otros</option>
+                <option>aries</option>
+                <option>tauro</option>
+                <option>geminis</option>
+                <option>cancer</option>
+                <option>leo</option>
+                <option>virgo</option>
+                <option>libra</option>
+                <option>escorpio</option>
+                <option>sagitario</option>
+                <option>capricornio</option>
+                <option>acuario</option>
+                <option>piscis</option>
             </select>
-            <div class="unos">Soy de los unos</div>
-            <div class="otros">Soy de los otros</div>
-            <div class="unos">Soy de los unos</div>
-            <div class="otros">Soy de los otros</div>
-            <div class="unos">Soy de los unos</div>
-            <div class="otros">Soy de los otros</div>            
+            <aside></aside>         
         </main>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script>
+            $.getJSON( "https://raw.githubusercontent.com/profesorfaco/dno096-2024/main/clase-05/datos.json", function( data ) {
+                console.log(data);
+                data.forEach(function(d){
+                    $("main").append("<div class='"+d.signo+"'><img src='"+d.foto+"'><p>"+d.nombre+"</p></div>");
+             });
+            });
+
+
+        </script>
+        <script>
             $("select").change(function () {
                 valor = $("select").val();
-                if (valor == "unos") {
-                    $(".unos").show();
-                    $(".otros").hide();
-                } else if (valor == "otros"){
-                    $(".unos").hide();
-                    $(".otros").show();
-                } else {
-                    $(".unos").show();
-                    $(".otros").show();
+                if (valor == "aries") {
+                    $(".aries").show();
+                    $(".tauro").hide();
+                    $(".geminis").hide();
+                    $(".cancer").hide();
+                    $(".leo").hide();
+                    $(".virgo").hide();
+                    $(".libra").hide();
+                    $(".escorpio").hide();
+                    $(".sagitario").hide();
+                    $(".capricornio").hide();
+                    $(".acuario").hide();
+                    $(".piscis").hide();
+                } 
+                else if (valor == "tauro"){
+                    $(".aries").hide();
+                    $(".tauro").show();
+                    $(".geminis").hide();
+                    $(".cancer").hide();
+                    $(".leo").hide();
+                    $(".virgo").hide();
+                    $(".libra").hide();
+                    $(".escorpio").hide();
+                    $(".sagitario").hide();
+                    $(".capricornio").hide();
+                    $(".acuario").hide();
+                    $(".piscis").hide();
+                }
+                else if (valor == "geminis"){
+                    $(".aries").hide();
+                    $(".tauro").hide();
+                    $(".geminis").show();
+                    $(".cancer").hide();
+                    $(".leo").hide();
+                    $(".virgo").hide();
+                    $(".libra").hide();
+                    $(".escorpio").hide();
+                    $(".sagitario").hide();
+                    $(".capricornio").hide();
+                    $(".acuario").hide();
+                    $(".piscis").hide();
+                } 
+                else if (valor == "cancer"){
+                    $(".aries").hide();
+                    $(".tauro").hide();
+                    $(".geminis").hide();
+                    $(".cancer").show();
+                    $(".leo").hide();
+                    $(".virgo").hide();
+                    $(".libra").hide();
+                    $(".escorpio").hide();
+                    $(".sagitario").hide();
+                    $(".capricornio").hide();
+                    $(".acuario").hide();
+                    $(".piscis").hide();
+                }
+                else if (valor == "leo"){
+                    $(".aries").hide();
+                    $(".tauro").hide();
+                    $(".geminis").hide();
+                    $(".cancer").hide();
+                    $(".leo").show();
+                    $(".virgo").hide();
+                    $(".libra").hide();
+                    $(".escorpio").hide();
+                    $(".sagitario").hide();
+                    $(".capricornio").hide();
+                    $(".acuario").hide();
+                    $(".piscis").hide();
+                }
+                else if (valor == "virgo"){
+                    $(".aries").hide();
+                    $(".tauro").hide();
+                    $(".geminis").hide();
+                    $(".cancer").hide();
+                    $(".leo").hide();
+                    $(".virgo").show();
+                    $(".libra").hide();
+                    $(".escorpio").hide();
+                    $(".sagitario").hide();
+                    $(".capricornio").hide();
+                    $(".acuario").hide();
+                    $(".piscis").hide();
+                }
+                else if (valor == "libra"){
+                    $(".aries").hide();
+                    $(".tauro").hide();
+                    $(".geminis").hide();
+                    $(".cancer").hide();
+                    $(".leo").hide();
+                    $(".virgo").hide();
+                    $(".libra").show();
+                    $(".escorpio").hide();
+                    $(".sagitario").hide();
+                    $(".capricornio").hide();
+                    $(".acuario").hide();
+                    $(".piscis").hide();
+                }
+                else if (valor == "escorpio"){
+                    $(".aries").hide();
+                    $(".tauro").hide();
+                    $(".geminis").hide();
+                    $(".cancer").hide();
+                    $(".leo").hide();
+                    $(".virgo").hide();
+                    $(".libra").hide();
+                    $(".escorpio").show();
+                    $(".sagitario").hide();
+                    $(".capricornio").hide();
+                    $(".acuario").hide();
+                    $(".piscis").hide();
+                }
+                else if (valor == "sagitario"){
+                    $(".aries").hide();
+                    $(".tauro").hide();
+                    $(".geminis").hide();
+                    $(".cancer").hide();
+                    $(".leo").hide();
+                    $(".virgo").hide();
+                    $(".libra").hide();
+                    $(".escorpio").hide();
+                    $(".sagitario").show();
+                    $(".capricornio").hide();
+                    $(".acuario").hide();
+                    $(".piscis").hide();
+                }
+                else if (valor == "capricornio"){
+                    $(".aries").hide();
+                    $(".tauro").hide();
+                    $(".geminis").hide();
+                    $(".cancer").hide();
+                    $(".leo").hide();
+                    $(".virgo").hide();
+                    $(".libra").hide();
+                    $(".escorpio").hide();
+                    $(".sagitario").hide();
+                    $(".capricornio").show();
+                    $(".acuario").hide();
+                    $(".piscis").hide();
+                }
+                else if (valor == "acuario"){
+                    $(".aries").hide();
+                    $(".tauro").hide();
+                    $(".geminis").hide();
+                    $(".cancer").hide();
+                    $(".leo").hide();
+                    $(".virgo").hide();
+                    $(".libra").hide();
+                    $(".escorpio").hide();
+                    $(".sagitario").hide();
+                    $(".capricornio").hide();
+                    $(".acuario").show();
+                    $(".piscis").hide();
+                }
+                else if (valor == "piscis"){
+                    $(".aries").hide();
+                    $(".tauro").hide();
+                    $(".geminis").hide();
+                    $(".cancer").hide();
+                    $(".leo").hide();
+                    $(".virgo").hide();
+                    $(".libra").hide();
+                    $(".escorpio").hide();
+                    $(".sagitario").hide();
+                    $(".capricornio").hide();
+                    $(".acuario").hide();
+                    $(".piscis").show();
+                }
+                else {
+                    $(".aries").show();
+                    $(".tauro").show();
+                    $(".geminis").show();
+                    $(".cancer").show();
+                    $(".leo").show();
+                    $(".virgo").show();
+                    $(".libra").show();
+                    $(".escorpio").show();
+                    $(".sagitario").show();
+                    $(".capricornio").show();
+                    $(".acuario").show();
+                    $(".piscis").show();
                 }
             });          
         </script>
